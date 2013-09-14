@@ -34,13 +34,31 @@ public class MiniCCompiler {
                     i++;
                 }
                 i++;
-                
             }
+            /*else if(splited[i].contains("{")){
+                String[] commentSplt = everything.split("\\a");
+                while(!"{".equals(commentSplt[i])) {
+                    while(!"}".equals(commentSplt[i])) {
+                        
+                    }
+                }
+            }*/
+            else if(splited[i].contains("repeat")){
+                String repeatCommand = "";
+                while(!"until".equals(splited[i])) {
+                    //i++;
+                    repeatCommand = repeatCommand + splited[i];
+                }
+                //System.out.println("sss " + repeatCommand);
+            }
+            
             wellFormed[j] = splited[i++];
+            if(wellFormed[j].contains(":=")) {
+                String[] countSplt = wellFormed[j].split(":=");
+            }
             System.out.println("index " + (j+1) + " " + wellFormed[j++]);
         }
         System.out.println("\n");
-        syn.compile(wellFormed);
+        //syn.compile(wellFormed);
     }
 }
-
