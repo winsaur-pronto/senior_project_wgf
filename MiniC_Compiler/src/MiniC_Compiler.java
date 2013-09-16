@@ -7,7 +7,7 @@ public class MiniC_Compiler {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         BufferedReader br = new BufferedReader(new FileReader("/Users/WINRAWR/NetBeansProjects/MiniC-Compiler/file.txt"));
         Syntax syn  = new Syntax();
-        String everything;
+        String everything = "";
         
         try {
             StringBuilder sb = new StringBuilder();
